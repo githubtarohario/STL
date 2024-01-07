@@ -4,6 +4,40 @@
 #include <iostream>
 #include <list>//list
 using namespace std;
+/*Buble sortを付け加える*/
+int Buble(void)
+{
+	int i, j;
+	int num[5] = { 7, 1, 3, 8, 5 };
+	int tmp;
+	//      昇順ソートのプログラム
+	for (i = 0; i < 5; i++)
+	{
+		for (j = i + 1; j < 5; j++)
+		{
+			if (num[i] > num[j])
+			{
+				tmp = num[i];
+				num[i] = num[j];
+				num[j] = tmp;
+			}
+		}
+	}
+	//      並べ替え結果の表示
+	for (i = 0; i < 5; i++)
+	{
+		printf("%d ", num[i]);
+	}
+	printf("\n");
+	return 0;
+}
+
+
+
+
+
+
+
 int list_sample() {
 	//listは配列と似ているがもっと高度（追加・削除が自由)
 	std::list<int> m{ 4,5,6 };
